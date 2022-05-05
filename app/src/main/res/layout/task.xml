@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/taskTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:textSize="24sp"
+            android:layout_weight="8"
+            android:ems="10"
+            android:text=""/>
+        <Button
+            android:id="@+id/taskDeleteButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:text="X">
+
+        </Button>
+    </LinearLayout-->
+    <!--com.google.android.material.card.MaterialCardView
+        android:theme="@style/Widget.Material3.CardView.Outlined"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/taskTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9">
+        </com.google.android.material.textview.MaterialTextView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/taskDeleteButton"
+            android:background="@color/purple_200"
+            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+            app:icon="@android:drawable/ic_delete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </com.google.android.material.button.MaterialButton>
+    </com.google.android.material.card.MaterialCardView-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/TaskView"
+        style="@style/TaskCard"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/taskTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.8">
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/taskCB"
+                app:buttonTint="@color/primary_dark"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.google.android.material.checkbox.MaterialCheckBox>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
