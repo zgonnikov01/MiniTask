@@ -38,7 +38,6 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
         holder.taskCB.setChecked(false);
         holder.taskCB.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked == true) {
-                Log.e("NIENSRTIE", tasks.toString());
                 long delayMillis = 450;
                 Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
